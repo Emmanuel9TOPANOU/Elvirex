@@ -1,0 +1,261 @@
+/* Empêcher le défilement horizontal */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
+@keyframes kenBurns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Effet Ken Burns corrigé */
+.animate-ken-burns {
+    animation: kenBurns 25s ease-in-out infinite alternate;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes kenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.15) translate(0, 0); }
+}
+
+
+
+/* Style des liens actifs */
+nav ul li a.active-link {
+    color: #CA161A !important;
+    font-weight: 700;
+}
+
+
+
+/* --- Styles de la Section Contact --- */
+.contact-section {
+    /* Reproduction du dégradé (du jaune vers le rouge) */
+    background: linear-gradient(to right, #f39c12, #e84d3b);
+    
+    /* Hauteur pour donner de l'espace, ajustez selon vos besoins */
+    padding: 100px 20px; 
+    
+    /* Centre le texte horizontalement */
+    text-align: center; 
+    
+    /* Assure que le texte est blanc pour le contraste */
+    color: white; 
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Styles du Titre --- */
+.contact-title {
+    font-size: 2.2em; 
+    font-weight: bold;
+    color: black; 
+    margin-bottom: 10px;
+}
+
+/* --- Styles de la Description --- */
+.contact-subtitle {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: white; 
+}
+
+
+
+
+.buttons-container {
+    text-align: center;
+    padding: 40px 20px; /* Espace autour du conteneur */
+    background-color: white; 
+}
+
+/* --- Style général des boutons --- */
+.btn {
+    display: inline-block; 
+    padding: 15px 30px; /* Espacement interne */
+    margin: 0 10px; 
+    border: none;
+    border-radius: 5px; /* Bords légèrement arrondis */
+    font-size: 1.1em; /* Taille de la police */
+    font-weight: bold;
+    cursor: pointer; /* Indique que le bouton est cliquable */
+    transition: background-color 0.3s ease; /* Transition douce au survol */
+    text-decoration: none; 
+}
+
+/* --- Style du bouton Rouge ("Contact Général") --- */
+.btn-red {
+    background-color: #d12228; 
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #bb1f24; /* Assombrir légèrement au survol */
+}
+
+/* --- Style du bouton Gris Clair ("Demande de devis") --- */
+.btn-light-grey {
+    background-color: #e0e0e0; /* Gris clair */
+    color: #333; /* Texte gris foncé ou noir pour le contraste */
+}
+
+.btn-light-grey:hover {
+    background-color: #d4d4d4; /* Assombrir légèrement au survol */
+}
+
+/* --- Ajustement pour l'affichage mobile (Optionnel) --- */
+@media (max-width: 600px) {
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%; 
+        max-width: 300px;
+    }
+}
+
+
+
+
+
+
+/* Ajustement de la section de titre 'Contactez-nous' sur les petits écrans */
+.contact-section {
+    padding: 60px 20px; /* Ajout d'un padding vertical pour l'espace */
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.5rem; /* Rendre le titre plus compact sur mobile */
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+}
+
+
+/* Cible les écrans jusqu'à 1023px (petits et moyens écrans, avant 'lg') */
+@media (max-width: 1023px) {
+    /* Sélectionne la carte d'assistance (ml-[140vh]...) */
+    .main-container > div:last-child {
+        /* Annule le positionnement absolu/flottant de Tailwind sur mobile */
+        position: relative !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        
+        /* Assure une bonne largeur et un espacement après la section formulaire */
+        width: 90% !important; 
+        max-width: 400px; /* Limite la largeur sur tablette */
+        margin-top: 3rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+  
+    .space-y-6 > div > div > .text-white { 
+        margin-left: 0.5rem !important; 
+        font-size: 0.9rem; 
+    }
+
+    .space-y-6 > div {
+        padding: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 1023px) {
+    .space-y-6 > .bg-white { /* Conteneur des coordonnées */
+        padding: 20px;
+    }
+
+    .space-y-6 > .rounded-xl iframe {
+        width: 100%;
+    }
+}
+
+
+
+
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.7s ease-in-out; /* Durée de la transition pour le fondu sortant */
+        }
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.7s ease-in-out; 
+        }
+        #text-content-container {
+            position: relative; /* ou z-20 comme déjà fait */
+        }
+       
+
+
+        #bg-image {
+            transition: opacity 1.5s ease-in-out;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .fade-slide-enter {
+    opacity: 0;
+    transform: translateY(15px);
+}
+.fade-slide-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-slide-leave {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-slide-leave-active {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}

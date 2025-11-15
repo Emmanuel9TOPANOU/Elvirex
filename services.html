@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Elvirex Communication</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- En tete de ma page -->
+    <header
+        class="flex items-center justify-between p-4 fixed top-0 w-full z-50 transition-all duration-300 bg-gray-50 border-b border-gray-200">
+
+        <div class="logo flex items-center">
+            <a href="index.html"><img src="src/assets/images/logo.png" alt="Logo IPS" class="h-19 w-auto" /></a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+            <span class="block w-6 h-0.5 bg-black"></span>
+            <span class="block w-6 h-0.5 bg-black"></span>
+            <span class="block w-6 h-0.5 bg-black"></span>
+        </button>
+
+        <div id="sidebar"
+            class="fixed top-0 right-0 w-[300px] h-full bg-black transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <div class="p-6">
+                <button id="closeSidebar" class="text-white hover:text-red-700 absolute top-4 right-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <nav class="mt-8">
+                    <ul class="flex flex-col space-y-6">
+                        <li>
+                            <a href="index.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="services.html"
+                                class="text-[#CA161A] font-lora hover:text-yellow-600 text-lg border-l-4 border-[#CA161A] block pl-3 py-1 transition duration-500">Services</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="a-propos.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">A
+                                Propos</a>
+                        </li>
+                        <li>
+                            <a href="blog.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Contact</a>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="mt-8 w-full bg-[#CA161A] rounded text-white font-bold py-3 px-4 text-lg transition duration-300 font-lora hover:bg-red-800 hover:scale-105 transform">
+                        <a href="faire-un-don.html">Demander un devis</a>
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <nav id="navMenu" class="hidden md:flex items-center gap-8 md:gap-15 md:flex-grow md:justify-center">
+            <ul class="flex md:flex-row items-center gap-6 md:gap-14 text-black font-semibold">
+                <li>
+                    <a href="index.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Accueil</a>
+                </li>
+                <li>
+                    <a href="services.html"
+                        class="font-lora text-[#CA161A] border-b-2 border-[#CA161A] hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Services</a>
+                </li>
+                <li>
+                    <a href="portfolio.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Portfolio</a>
+                </li>
+                <li>
+                    <a href="a-propos.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">A
+                        Propos</a>
+                </li>
+                <li>
+                    <a href="blog.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Contact</a>
+                </li>
+            </ul>
+
+            <button class="bg-[#CA161A] rounded text-white font-bold h-12 px-4 text-lg transition duration-300 font-lora hover:bg-red-800 hover:scale-105 transform 
+                    md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2">
+                <a href="faire-un-don.html">Demander un devis</a>
+            </button>
+        </nav>
+    </header>
+
+    <main class="mt-24">
+
+        <!-- Section Services -->
+        <section
+            class="relative h-[50vh] sm:h-[50vh] md:h-[60vh] bg-cover bg-center text-white flex items-center justify-center p-4 animate-ken-burns"
+            style="background-image: url('src/assets/images/Elvi_02.jpg');" data-aos="zoom-in" data-aos-duration="1200">
+
+            <div class="absolute inset-0 bg-black opacity-75"></div>
+
+            <div class="relative z-10 text-center px-4">
+
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-lora font-bold mb-4 sm:mb-2" data-aos="fade-down"
+                    data-aos-delay="300" data-aos-duration="1000">
+                    Nos <span class="text-yellow-700" data-aos="fade-right" data-aos-delay="600"
+                        data-aos-duration="800">Services</span>
+                </h2>
+
+                <p class="text-base sm:text-lg md:text-xl font-lora font-light text-gray-200 max-w-2xl mx-auto px-2 sm:px-4"
+                    data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                    Des solutions complètes pour propulser votre communication digitale
+                </p>
+
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Section Conseils et Stratégie -->
+        <section class="p-8 md:p-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+
+                <div class="md:w-1/2 w-full overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="src/assets/images/Elvi_06.jpg" alt="Gros plan d'un plateau de jeu d'échecs"
+                        class="w-full h-auto object-cover shadow-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+
+                <div class="md:w-1/2 w-full p-6 bg-white rounded-lg" data-aos="fade-left" data-aos-duration="1000">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-yellow-500 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-lightbulb text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-black mt-1">
+                            Conseil & Stratégie
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-4 mb-6">
+                        Nous élaborons des stratégies de communication sur mesure pour atteindre
+                        vos objectifs business. Audit, positionnement, plan d'action.
+                    </p>
+
+                    <h4 class="text-red-600 font-bold ml-4 font-lora mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 ml-4 font-bold mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Audit de communication
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Définition de positionnement
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Plan stratégique
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Mesure des performances
+                        </li>
+                    </ul>
+
+                    <a href="#"
+                        class="inline-flex items-center ml-4 justify-center bg-[#CA161A] hover:bg-red-800 text-white 
+                              font-bold py-3 px-8 rounded-md transition duration-300 hover:scale-105 transform shadow-md hover:shadow-lg">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Community managment-->
+        <section id="community" class="p-8 md:p-12 bg-white">
+            <div
+                class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center border-2 border-gray-100 rounded-xl  overflow-hidden">
+
+                <div class="md:w-1/2 w-full p-6 md:p-10">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-blue-500 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-users text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-black mt-1">
+                            Community Management
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Gestion professionnelle de vos réseaux sociaux pour développer votre communauté
+                        et renforcer votre image de marque.
+                    </p>
+
+                    <h4 class="text-red-700 font-bold ml-17 mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 ml-17 font-bold mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Création de contenu
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Animation quotidienne
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Gestion de la e-réputation
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Reporting mensuel
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center justify-center ml-17 bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_01.jpg" alt="Tableau de stratégie avec le mot PLAN au centre"
+                        class="w-full h-full object-cover md:rounded-none rounded-b-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Publicité digitale-->
+        <section id="pub" class="p-8 md:p-12 bg-gray-50" data-aos="fade-left" data-aos-duration="1000">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_05.jpg" alt="Gros plan d'un plateau de jeu d'échecs"
+                        class="w-full h-auto object-cover shadow-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+
+                <div class="md:w-1/2 w-full p-6   bg-white rounded-lg ">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-amber-500 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-megaphone text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-black mt-1">
+                            Publicité digitale
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Campagnes publicitaires ciblées sur Facebook, Instagram, Google Ads et Linkedln pour maximiser
+                        votre ROI.
+                    </p>
+
+                    <h4 class="text-red-600 ml-17 font-bold mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 font-bold font-lora ml-17 mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Facebook & Instagram Ads
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Google Ads
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Linkedln Ads
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Remarketing
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center ml-17 justify-center bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Graphisme et identité visuelle-->
+        <section id="design" class="p-8 md:p-12 bg-white" data-aos="fade-up" data-aos-duration="1000">
+            <div
+                class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center border-2 border-gray-100 rounded-xl  overflow-hidden">
+
+                <div class="md:w-1/2 w-full p-6 md:p-10">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-purple-500 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-palette text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-black mt-1">
+                            Graphisme et identité visuelle
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Création d’identités visuelles uniques et percutantes : logos, chartes graphiques, supports
+                        print et digitaux.
+                    </p>
+
+                    <h4 class="text-red-700 font-bold ml-17 mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 ml-17 font-bold mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Création de logo
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span>Charte graphique
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Support print
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Design digital
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center justify-center ml-17 bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_04.jpg" alt="Tableau de stratégie avec le mot PLAN au centre"
+                        class="w-full h-full object-cover md:rounded-none rounded-b-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Creation de site web -->
+        <section id="web" class="p-8 md:p-12 bg-gray-50" data-aos="fade-right" data-aos-duration="1000">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_07.jpg" alt="Gros plan d'un plateau de jeu d'échecs"
+                        class="w-full h-auto object-cover shadow-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+
+                <div class="md:w-1/2 w-full p-6   bg-white rounded-lg ">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-lime-600 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-laptop text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-black mt-1">
+                            Creation de site web
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Site web modernes, responsifs et optimisés SEO.Du site vitrine à l’e-commerce, nous créons des
+                        expériences digitales performantes.
+                    </p>
+
+                    <h4 class="text-red-600 ml-17 font-bold mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 font-bold font-lora ml-17 mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Site vitrine
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> E-commerce
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Application Web
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Optimisation SEO
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center ml-17 justify-center bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Formations -->
+        <section class="p-8 md:p-12 bg-white" data-aos="fade-left" data-aos-duration="1000">
+            <div
+                class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center border-2 border-gray-100 rounded-xl  overflow-hidden">
+
+                <div class="md:w-1/2 w-full p-6 md:p-10">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-green-800 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-graduation-cap text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-black mt-1">
+                            Formations
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Formations sur mesure pour monter en compétences sur les outils digitaux et les stratégies de
+                        communication.
+                    </p>
+
+                    <h4 class="text-red-700 font-bold ml-17 mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 ml-17 font-bold mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Réseaux sociaux
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Marketing digital
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Outils Adobe
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Stratégie de contenu
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center justify-center ml-17 bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_08.jpg" alt="Tableau de stratégie avec le mot PLAN au centre"
+                        class="w-full h-full object-cover md:rounded-none rounded-b-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Evènementiel -->
+        <section id="event" class="p-8 md:p-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_09.jpg" alt="Gros plan d'un plateau de jeu d'échecs"
+                        class="w-full h-auto object-cover shadow-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+
+                <div class="md:w-1/2 w-full p-6   bg-white rounded-lg ">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-amber-800 rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-smiley text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-black mt-1">
+                            Evènementiel
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Conception et organisation d’evènements corporate : séminaires, lancement de produits, salons
+                        professionnels.
+                    </p>
+
+                    <h4 class="text-red-600 ml-17 font-bold mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 font-bold font-lora ml-17 mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Conception d’evènements
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Gestion logistique
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Communication évènementielle
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Animation & Modération
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center ml-17 justify-center bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Recrutement-->
+        <section class="p-8 md:p-12 bg-white" data-aos="fade-right" data-aos-duration="1000">
+            <div
+                class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center border-2 border-gray-100 rounded-xl  overflow-hidden">
+
+                <div class="md:w-1/2 w-full p-6 md:p-10">
+
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="p-3 bg-black rounded-lg mr-4 flex-shrink-0 animate-bounce transition-all duration-300">
+                            <i class="ph ph-briefcase text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-black mt-1">
+                            Recrutement
+                        </h3>
+                    </div>
+
+                    <p class="text-[#565252] font-bold font-lora ml-17 mb-6">
+                        Accompagnements dans le recrutement de talents en communication et marketing digital pour
+                        renforcer vos équipes.
+                    </p>
+
+                    <h4 class="text-red-700 font-bold ml-17 mb-3">
+                        Ce que nous proposons
+                    </h4>
+
+                    <ul class="space-y-2 ml-17 font-bold mb-8">
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Définition de profil
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Recherche de candidats
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span>Présélection et entretiens
+                        </li>
+                        <li class="flex items-start text-[#565252]">
+                            <span class="text-yellow-600 mr-2 mt-1 flex-shrink-0">→</span> Accompagnement à
+                            l’intégration
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center justify-center ml-17 bg-red-700 hover:bg-red-800 text-white 
+                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                        Faire une demande
+                        <span class="ml-2">→</span>
+                    </a>
+
+                </div>
+
+                <div class="md:w-1/2 w-full overflow-hidden">
+                    <img src="src/assets/images/Elvi_10.jpg" alt="Tableau de stratégie avec le mot PLAN au centre"
+                        class="w-full h-full object-cover md:rounded-none rounded-b-xl transition-transform duration-300 hover:scale-110" />
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-black py-12 sm:py-16 md:py-20 text-white">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
+
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-lora font-bold mb-4 sm:mb-6" data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Vous avez un projet en tête ?
+                </h2>
+
+                <p class="text-base sm:text-lg mb-8 sm:mb-10 text-gray-300 font-lora max-w-2xl mx-auto"
+                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    Discutons ensemble de vos besoins et trouvons la solution adaptée
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6" data-aos="fade-up"
+                    data-aos-delay="400" data-aos-duration="1000">
+
+                    <a href="#" class="bg-[#CA161A] text-white font-bold py-3 px-8 rounded-md 
+                      hover:bg-[#b51216] transition duration-300 w-full sm:w-auto 
+                      flex items-center justify-center space-x-2 text-lg hover:scale-105 transform ">
+                        <span>Faire une demande gratuit</span>
+                        <span>&rarr;</span>
+                    </a>
+
+                    <a href="#"
+                        class="border-2 border-white text-white font-bold py-3 px-8 rounded-md 
+                      hover:bg-white hover:text-black transition duration-300 w-full sm:w-auto text-lg hover:scale-105 transform ">
+                        Nos réalisations
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!--Footer-->
+    <footer class="bg-black text-white pt-16 pb-4 px-4 sm:px-8 mt-10 md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+
+                <div>
+                    <div class="mb-4">
+                        <img src="src/assets/images/logo.png" alt="">
+                    </div>
+
+                    <p class="text-white text-sm mb-6 max-w-xs">
+                        Nous vous faisons gagner du temps en vous accompagnant dans votre stratégie de communication.
+                    </p>
+
+                    <div class="flex space-x-4 text-white">
+
+                        <a href="#" class="w-10 h-10 rounded-full border-current bg-black hover:bg-red-700 transition duration-150 text-[#fff] 
+                            flex items-center justify-center" style="border-color: #fff;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" class="w-10 h-10 p-1 rounded-full border-current bg-black hover:bg-red-700 transition duration-150 text-[#fff]
+                            flex items-center justify-center" style="border-color: #fff;">
+                            <svg class="w-full h-full" fill="none" stroke="#fff" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z">
+                                </path>
+                            </svg>
+                        </a>
+
+
+
+                        <a href="#" class="w-10 h-10 rounded-full border-current bg-black hover:bg-red-700 transition duration-150 text-[#fff] 
+                            flex items-center justify-center" style="border-color: #fff;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6">
+                                <path fill="currentColor"
+                                    d="M448.5 209.9c-44 .1-87-13.6-122.8-39.2l0 178.7c0 33.1-10.1 65.4-29 92.6s-45.6 48-76.6 59.6-64.8 13.5-96.9 5.3-60.9-25.9-82.7-50.8-35.3-56-39-88.9 2.9-66.1 18.6-95.2 40-52.7 69.6-67.7 62.9-20.5 95.7-16l0 89.9c-15-4.7-31.1-4.6-46 .4s-27.9 14.6-37 27.3-14 28.1-13.9 43.9 5.2 31 14.5 43.7 22.4 22.1 37.4 26.9 31.1 4.8 46-.1 28-14.4 37.2-27.1 14.2-28.1 14.2-43.8l0-349.4 88 0c-.1 7.4 .6 14.9 1.9 22.2 3.1 16.3 9.4 31.9 18.7 45.7s21.3 25.6 35.2 34.6c19.9 13.1 43.2 20.1 67 20.1l0 87.4z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-[#E5B420] font-semibold mb-4 border-b-2 border-[#E5B420] inline-block pb-1">
+                        Liens Rapides
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Accueil</a></li>
+                        <li><a href="services.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Portfolio</a>
+                        </li>
+                        <li><a href="a-propos.html" class="text-white hover:text-[#CA161A] transition duration-300">À
+                                propos</a></li>
+                        <li><a href="blog.html" class="text-white hover:text-[#CA161A] transition duration-300">Blog</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-[#E5B420] font-semibold mb-4 border-b-2 border-[#E5B420] inline-block pb-1">
+                        Nos Services
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html#community"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Community
+                                Management</a></li>
+                        <li><a href="services.html#web"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Création de Site
+                                Web</a></li>
+                        <li><a href="services.html#pub"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Publicité
+                                Digitale</a></li>
+                        <li><a href="services.html#event"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Événementiel</a>
+                        </li>
+                        <li><a href="services.html#design"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Graphisme</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-[#E5B420] font-semibold mb-4 border-b-2 border-[#E5B420] inline-block pb-1">
+                        Contact
+                    </h3>
+                    <ul class="space-y-3 text-sm text-white">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0 text-red-600 mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Von fin clôture ITAA, cinquième von à gauche puis première à droite.</span>
+                        </li>
+
+
+                        <li class="space-y-1 pt-2">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 mr-3 flex-shrink-0 text-red-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
+                                <span class="text-white">+229 0143721865</span>
+                            </div>
+                            <div class="pl-6 space-y-0 text-sm">
+                                <a href="tel:+2290154656673" class="hover:text-white">+229 0154656673</a><br>
+                                <a href="tel:+2290196454393" class="hover:text-white">+229 0196454393</a>
+                            </div>
+                        </li>
+
+
+                        <li class="flex items-center space-x-2 pt-2">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0 text-red-600" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:elvirex@gmail.com"
+                                class="hover:text-white transition duration-200">elvirex@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-gray-700 mt-12 mb-4">
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-white">
+                <div class="mb-2 sm:mb-0 flex items-center space-x-1">
+                    <i class="far fa-copyright"></i>
+                    <span>2025 Elvirex Communication. Tous droits réservés</span>
+                </div>
+                <div class="space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-[#CA161A] transition duration-300">Mentions
+                        légales</a>
+                    <a href="politique-confidentialite.html"
+                        class="hover:text-[#CA161A] transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 p-3 bg-[#CA161A] text-white rounded-full shadow-xl 
+               transition-all duration-300 opacity-0 pointer-events-none hover:bg-red-800 hover:scale-110 transform">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="src/scripts/script-index.js"></script>
+    <script src="src/scripts/script-nav.js"></script>
+    <script src="src/scripts/script-modal.js"></script>
+
+
+
+</body>
+
+</html>
