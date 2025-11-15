@@ -13,7 +13,7 @@ html, body {
 
 /* Effet Ken Burns corrigé */
 .animate-ken-burns {
-    animation: kenBurns 25s ease-in-out infinite alternate;
+    animation: kenBurns 50s ease-in-out infinite alternate;
     background-size: cover;
     background-position: center;
 }
