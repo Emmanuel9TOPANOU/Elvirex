@@ -6,15 +6,11 @@ html, body {
 
 
 
-@keyframes kenBurns {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
+
 
 /* Effet Ken Burns corrigé */
 .animate-ken-burns {
-    animation: kenBurns 25s ease-in-out infinite alternate;
-    background-size: cover;
+    animation: kenBurns 50s ease-in-out infinite alternate;
     background-position: center;
 }
 

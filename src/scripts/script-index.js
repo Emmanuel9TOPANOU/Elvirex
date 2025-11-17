@@ -1,6 +1,6 @@
 // Initialisation de AOS (Animate On Scroll)
 AOS.init({
-    duration: 1000,    // durée des animations par défaut
+    duration: 500,    // durée des animations par défaut
     once: false,       // animations se répètent à chaque scroll
     mirror: true,      // animations fonctionnent dans les deux sens
     offset: 150,       // décalage en pixels avant que l'animation ne se déclenche

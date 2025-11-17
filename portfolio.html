@@ -30,7 +30,7 @@
         <div id="sidebar"
             class="fixed top-0 right-0 w-[300px] h-full bg-black transform translate-x-full transition-transform duration-300 ease-in-out z-50">
             <div class="p-6">
-                <button id="closeSidebar" class="text-white hover:text-red-700 absolute top-4 right-4">
+                <button id="closeSidebar" class="text-white hover:text-yellow-600 absolute top-4 right-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -123,14 +123,14 @@
         <!-- Section Héro -->
         <section
             class="relative h-[50vh] sm:h-[50vh] md:h-[60vh] bg-cover bg-center text-white flex items-center justify-center p-4 animate-ken-burns"
-            style="background-image: url('src/assets/images/Elvi_15.jpg');" data-aos="zoom-in" data-aos-duration="1500">
+            style="background-image: url('src/assets/images/Elvi_15.jpg');" data-aos-duration="400">
 
             <div class="absolute inset-0 bg-black opacity-75"></div>
 
             <div class="relative z-10 text-center px-4">
 
                 <h1 class="text-3xl sm:text-4xl md:text-6xl font-lora font-bold mb-4 sm:mb-2 tracking-widest max-w-4xl mx-auto px-4"
-                    data-aos="fade-down" data-aos-delay="300" data-aos-duration="500">
+                    data-aos="fade-down" data-aos-duration="400">
                     <span>P O R T</span> - <span class="text-yellow-600">F O L I O</span>
                 </h1>
 
@@ -139,7 +139,7 @@
 
 
         <!--Filtre-->
-        <div class="container mx-auto px-4 py-8">
+        <div class="container mx-auto mt-15 px-4 py-8">
             <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 mb-8">
 
                 <div class="flex items-center text-gray-800 shrink-0">
@@ -154,23 +154,23 @@
 
                 <div id="filter-buttons" class="flex flex-wrap gap-3">
                     <button
-                        class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out shadow-md hover:bg-red-700">
+                        class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out shadow-md ">
                         Tous les projets
                     </button>
                     <button
-                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-red-700 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
+                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-yellow-600 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
                         Graphisme
                     </button>
                     <button
-                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-red-700 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
+                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-yellow-600 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
                         Web
                     </button>
                     <button
-                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-red-700 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
+                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-yellow-600 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
                         Événementiel
                     </button>
                     <button
-                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-red-700 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
+                        class="bg-gray-200 text-gray-800 hover:bg-red-100 hover:text-yellow-600 px-4 py-2 rounded-full font-semibold text-sm transition duration-300 ease-in-out">
                         Communication
                     </button>
                 </div>
@@ -178,227 +178,174 @@
         </div>
 
 
-        <!--Rangé 01-->
-        <div class="max-w-6xl  mx-auto p-4 md:p-8">
-            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Portfolio Grid -->
+      
+ <div id="portfolio-grid" class="flex flex-wrap gap-8 justify-start px-4 py-8">
 
-                <div
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_11.jpg" alt="Refonte Identité Visuelle - TechStart">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">GRAPHISME</p>
-                        <h3 class="text-lg font-extrabold text-black">Refonte Identité Visuelle - TechStart</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Création complète d'une nouvelle identité visuelle
-                            pour cette startup technologique, incluant le logo, la palette de couleurs, la typographie
-                            et les supports de communication...</p>
-                        <a href="#"
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div id="portfolio-card-trigger-fitlife"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal-fitlife')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_21.jpg" alt="Application Mobile - FitLife">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">WEB</p>
-                        <h3 class="text-lg font-extrabold text-black">Application Mobile - FitLife</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Conception et développement d'une application
-                            mobile de coaching sportif avec des fonctionnalités de suivi d'entraînement, de nutrition et
-                            de communauté...</p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="portfolio-card-trigger-eco-3"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal-eco-3')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_20.jpg" alt="Stratégie Digitale - Eco Green">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">COMMUNICATION</p>
-                        <h3 class="text-lg font-extrabold text-black">Stratégie Digitale - Eco Green</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Élaboration et mise en œuvre d'une stratégie de
-                            communication digitale complète pour une entreprise éco-responsable, incluant les réseaux
-                            sociaux...</p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- GRAPHISME : 3 projets -->
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_11.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Refonte Identité Visuelle - TechStart">
         </div>
-
-        <!--Rangé 2-->
-        <div class="max-w-6xl mx-auto p-4 md:p-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div id="portfolio-card-trigger-fitlife-2"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal-fitlife-2')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_19.jpg" alt="Application Mobile - FitLife">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">WEB</p>
-                        <h3 class="text-lg font-extrabold text-black">Application Mobile - FitLife (V2)</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Conception et développement d'une application
-                            mobile de coaching sportif avec des fonctionnalités de suivi d'entraînement, de nutrition et
-                            de communauté...</p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="portfolio-card-trigger"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_12.jpg" alt="Refonte Identité Visuelle - TechStart">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">GRAPHISME</p>
-                        <h3 class="text-lg font-extrabold text-black">Refonte Identité Visuelle - TechStart</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Création complète d'une nouvelle identité visuelle
-                            pour cette startup technologique, incluant le logo, la palette de couleurs, la typographie
-                            et les supports de communication...</p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="portfolio-card-trigger-summit-2"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal-summit-2')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_09.jpg" alt="Évènement Corporate - Summit 2025">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">EVENEMENTIEL</p>
-                        <h3 class="text-lg font-extrabold text-black">Évènement Corporate - Summit 2025 (V2)</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Organisation complète d’un évènement corporate
-                            réunissant 500 participant avec gestion de la logistique, du contenu, et de la promotion...
-                        </p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">GRAPHISME</p>
+            <h3 class="text-lg font-extrabold text-black">Refonte Identité Visuelle - TechStart</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Création complète d'une nouvelle identité visuelle pour cette startup, incluant logo, palette de couleurs et supports de communication.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
         </div>
+    </div>
 
-        <!--Rangé 3-->
-        <div class="max-w-6xl mx-auto p-4 md:p-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div id="portfolio-card-trigger-eco"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal-eco')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_22.jpg" alt="Stratégie Digitale - Eco Green">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">COMMUNICATION</p>
-                        <h3 class="text-lg font-extrabold text-black">Stratégie Digitale - Eco Green</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Élaboration et mise en œuvre d'une stratégie de
-                            communication digitale complète pour une entreprise éco-responsable, incluant les réseaux
-                            sociaux...</p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="portfolio-card-trigger-summit"
-                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer portfolio-item max-w-sm mx-auto"
-                    onclick="openModal('portfolio-modal-summit')">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            src="src/assets/images/Elvi_16.jpg" alt="Évènement Corporate - Summit 2025">
-                    </div>
-                    <div class="p-4 space-y-3">
-                        <p class="text-xs font-bold text-red-600 uppercase">EVENEMENTIEL</p>
-                        <h3 class="text-lg font-extrabold text-black">Évènement Corporate - Summit 2025</h3>
-                        <p class="text-sm text-gray-500 line-clamp-3">Organisation complète d’un évènement corporate
-                            réunissant 500 participant avec gestion de la logistique, du contenu, et de la promotion...
-                        </p>
-                        <div
-                            class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-red-700">
-                            Voir le projet
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_12.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Refonte Site Web - Nova">
         </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">GRAPHISME</p>
+            <h3 class="text-lg font-extrabold text-black">Refonte Site Web - Nova</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Refonte complète d'un site web vitrine pour la startup Nova avec optimisation UX/UI.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_13.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Logo Branding - TechStart">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">GRAPHISME</p>
+            <h3 class="text-lg font-extrabold text-black">Logo Branding - TechStart</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Création et déclinaison complète du branding et des supports graphiques pour TechStart.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- COMMUNICATION : 3 projets -->
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_20.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Stratégie Digitale - Eco Green">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">COMMUNICATION</p>
+            <h3 class="text-lg font-extrabold text-black">Stratégie Digitale - Eco Green</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Élaboration d'une stratégie de communication digitale complète pour Eco Green.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_22.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Communication Réseaux - Eco Green">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">COMMUNICATION</p>
+            <h3 class="text-lg font-extrabold text-black">Communication Réseaux - Eco Green</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Campagne complète sur les réseaux sociaux et marketing digital pour Eco Green.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_21.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Marketing Digital - Eco Green">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">COMMUNICATION</p>
+            <h3 class="text-lg font-extrabold text-black">Marketing Digital - Eco Green</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Gestion des campagnes marketing et création de contenu digital pour Eco Green.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- EVENEMENTIEL : 2 projets (réduire espace entre les deux) -->
+    <div class="portfolio-item mr-2 bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_16.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Évènement Corporate - Summit 2025">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">EVENEMENTIEL</p>
+            <h3 class="text-lg font-extrabold text-black">Évènement Corporate - Summit 2025</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Organisation complète d’un évènement corporate réunissant 500 participants.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_19.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Évènement Corporate - Summit 2025 (V2)">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">EVENEMENTIEL</p>
+            <h3 class="text-lg font-extrabold text-black">Évènement Corporate - Summit 2025 (V2)</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Gestion complète de la logistique et du contenu de l’évènement.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- WEB : 1 projet -->
+    <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:scale-105 transition duration-300 group cursor-pointer max-w-sm mx-auto">
+        <div class="h-64 overflow-hidden">
+            <img src="src/assets/images/Elvi_21.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Application Mobile - FitLife">
+        </div>
+        <div class="p-4 space-y-3">
+            <p class="text-xs font-bold text-red-600 uppercase">WEB</p>
+            <h3 class="text-lg font-extrabold text-black">Application Mobile - FitLife</h3>
+            <p class="text-sm text-gray-500 line-clamp-3">Conception et développement d'une application mobile de coaching sportif avec suivi d'entraînement, nutrition et communauté.</p>
+            <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm pt-2 hover:text-yellow-600">
+                Voir le projet
+                <svg class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
 
 
     </main>
@@ -1171,7 +1118,7 @@
 
 
     <!--Footer-->
-    <footer class="bg-black text-white pt-16 pb-4 px-4 sm:px-8 mt-10 md:px-12">
+    <footer class="bg-black text-white pt-16 pb-4 px-4 sm:px-8  md:px-12">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
 
