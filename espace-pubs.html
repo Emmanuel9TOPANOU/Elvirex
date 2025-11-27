@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Elvirex Communication</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+
+</head>
+
+<body>
+    <!-- En tete de ma page -->
+    <header
+        class="flex items-center justify-between p-4 fixed top-0 w-full z-50 transition-all duration-300 bg-gray-50 border-b border-gray-200">
+
+        <div class="logo flex items-center">
+            <a href="index.html"><img src="src/assets/images/logo.png" alt="Logo IPS" class="h-19 w-auto" /></a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+            <span class="block w-6 h-0.5 bg-black"></span>
+            <span class="block w-6 h-0.5 bg-black"></span>
+            <span class="block w-6 h-0.5 bg-black"></span>
+        </button>
+
+        <div id="sidebar"
+            class="fixed top-0 right-0 w-[300px] h-full bg-black transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <div class="p-6">
+                <button id="closeSidebar" class="text-white hover:text-red-700 absolute top-4 right-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <nav class="mt-8">
+                    <ul class="flex flex-col space-y-6">
+                        <li>
+                            <a href="index.html"
+                                class="text-[#CA161A] font-lora hover:text-yellow-600 text-lg border-l-4 border-[#CA161A] block pl-3 py-1 transition duration-500">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="services.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Services</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="a-propos.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">A
+                                Propos</a>
+                        </li>
+                        <li>
+                            <a href="blog.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Blog</a>
+                        </li>
+                        <li>
+                            <a href="espace-pubs.html"
+                                class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Espace-Pub</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Contact</a>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="mt-8 w-full bg-[#CA161A] rounded text-white font-bold py-3 px-4 text-lg transition duration-300 font-lora hover:bg-red-800 hover:scale-105 transform">
+                        <a href="contact.html">Demander un devis</a>
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <nav id="navMenu" class="hidden md:flex items-center gap-8 md:gap-15 md:flex-grow md:justify-center">
+            <ul class="flex md:flex-row items-center gap-6 md:gap-14 text-black font-semibold">
+                <li>
+                    <a href="index.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Accueil</a>
+
+                </li>
+                <li>
+                    <a href="services.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Services</a>
+                </li>
+                <li>
+                    <a href="portfolio.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Portfolio</a>
+                </li>
+                <li>
+                    <a href="a-propos.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">A
+                        Propos</a>
+                </li>
+                <li>
+                    <a href="blog.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Blog</a>
+                </li>
+                <li>
+                    <a href="espace-pubs.html"
+                        class="font-lora text-[#CA161A] border-b-2 border-[#CA161A] hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Espace-Pub</a>
+                </li>
+                <li>
+                    <a href="contact.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Contact</a>
+                </li>
+            </ul>
+
+            <button class="bg-[#CA161A] rounded text-white font-bold h-12 px-4 text-lg transition duration-300 font-lora hover:bg-red-800 hover:scale-105 transform 
+                    md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2">
+                <a href="contact.html">Demander un devis</a>
+            </button>
+        </nav>
+    </header>
+
+    <main class="mt-24">
+
+        <!--Hero Section -->
+        <section class="relative w-full bg-cover bg-center text-white py-20"
+            style="background-image: url('src/assets/images/Elvi_37.jpg');">
+
+            <div class="absolute inset-0 bg-black opacity-80"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto text-center px-4">
+
+                <div
+                    class="inline-flex items-center gap-2 bg-white/30 text-white px-4 py-2 rounded-full mb-6 backdrop-blur-md">
+                    <i class="ph ph-megaphone"></i>
+
+
+                    <span class="font-bold text-2xl">Espace publicité</span>
+                </div>
+
+                <p class="text-lg md:text-xl font-light leading-relaxed text-white/90" data-aos="fade-up"
+                    data-aos-duration="400">
+                    Elvirex Communication vous présente ses partenaires annonceurs.
+                    Des entreprises vérifiées et de confiance qui proposent des services
+                    de qualité dans différents domaines d’activité au Bénin.
+                </p>
+
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <button
+                        class="flex items-center text-2xl gap-2 bg-[#E5B420] transition px-5 py-3 rounded-full backdrop-blur-md">
+                        <i class="ph ph-eye"></i>
+                        Entreprises vérifiées
+                    </button>
+
+                    <button
+                        class="flex items-center text-2xl gap-2 bg-[#E5B420] transition px-5 py-3 rounded-full backdrop-blur-md">
+                        <i class="ph ph-trend-up"></i>
+                        Contact direct
+                    </button>
+
+                    <button
+                        class="flex items-center text-2xl gap-2 bg-[#E5B420] transition px-5 py-3 rounded-full backdrop-blur-md">
+                        <i class="ph ph-sparkle"></i>
+                        Services de qualité
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Counters Section-->
+        <section class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+
+                <div class="flex flex-col items-center">
+                    <div class="w-25 h-25 rounded-full flex items-center justify-center mb-6 shadow-xl"
+                        style="background: linear-gradient(135deg, #FF9900 0%, #FF5A00 100%);">
+                        <i class="ph ph-users text-4xl text-white"></i>
+                    </div>
+
+                    <p class="text-3xl font-extrabold text-[#FF9900] mb-2">
+                        9 +
+                    </p>
+                    <h3 class="text-lg font-semibold text-black">
+                        Entreprises partenaires
+                    </h3>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="w-25 h-25 rounded-full flex items-center justify-center mb-6 shadow-xl"
+                        style="background: linear-gradient(135deg, #FF9900 0%, #FF5A00 100%);">
+                        <i class="ph ph-medal text-4xl text-white"></i>
+                    </div>
+
+                    <p class="text-3xl font-extrabold text-[#FF9900] mb-2">
+                        100%
+                    </p>
+                    <h3 class="text-lg font-semibold text-black">
+                        Vérifiées
+                    </h3>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="w-25 h-25 rounded-full flex items-center justify-center mb-6 shadow-xl"
+                        style="background: linear-gradient(135deg, #FF9900 0%, #FF5A00 100%);">
+                        <i class="ph ph-globe-hemisphere-west text-4xl text-white"></i>
+                    </div>
+
+                    <p class="text-3xl font-extrabold text-[#FF9900] mb-2">
+                        15K +
+                    </p>
+                    <h3 class="text-lg font-semibold text-black">
+                        Clients Satisfaits
+                    </h3>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--Partners Section-->
+        <section class="bg-gray-50 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4">
+
+                <div class="text-center mb-12">
+                    <span class="inline-block bg-[#FDDD9B] text-black font-bold px-5 py-1 rounded-md text-3xl mb-4">
+                        Nos annonceurs
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-black mb-3">
+                        Entreprises partenaires et annonceurs
+                    </h2>
+                    <p class="text-black max-w-2xl mx-auto">
+                        Elvirex Communication vous présente ses partenaires annonceurs. Des entreprises vérifiées
+                        et de confiance qui proposent des services de qualité dans différents services d’activité au
+                        Bénin.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="partner-card1" data-id="partenaire-1"
+                        class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
+
+                        <div class="h-40 w-full rounded-t-lg overflow-hidden">
+                            <img src="src/assets/images/Elvi_33.jpg" alt="Image du partenaire"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                        </div>
+
+                        <div class="p-5">
+
+                            <span
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                Automobile & Mécanique
+                            </span>
+
+                            <h3
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                AutoExpert Cotonou
+                            </h3>
+
+                            <p class="text-black text-sm mb-4 line-clamp-4">
+                                Garage automobile professionnel. Réparation, entretien et diagnostic de tous les types
+                                de véhicules.
+                            </p>
+
+                            <div class="flex items-center gap-4 text-sm text-black mb-5">
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 2000 +
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 15 ans
+                                </span>
+                            </div>
+
+
+
+                            <button
+                                class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
+                                data-partner-id="partenaire-1"
+                                style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
+                                Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="partner-card2" data-id="partenaire-2"
+                        class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
+                        <div class="h-40 w-full rounded-t-lg overflow-hidden">
+                            <img src="src/assets/images/Elvi_39.jpg" alt="Image du partenaire"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                        </div>
+                        <div class="p-5">
+                            <span
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                Technologies & IT
+                            </span>
+                            <h3
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                TechSolutions Bénin
+                            </h3>
+                            <p class="text-black text-sm mb-4 line-clamp-4">
+                                Solutions informatiques innovantes pour entreprises modernes. Installation, maintenance,
+                                etc...
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-black mb-5">
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 150 +
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 10 ans
+                                </span>
+                            </div>
+                            <button
+                                class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
+                                data-partner-id="partenaire-2"
+                                style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
+                                Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="partner-card3" data-id="partenaire-3"
+                        class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
+                        <div class="h-40 w-full rounded-t-lg overflow-hidden">
+                            <img src="src/assets/images/Elvi_36.jpg" alt="Image du partenaire"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                        </div>
+                        <div class="p-5">
+                            <span
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                Restauration & gastronomie
+                            </span>
+                            <h3
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                Saveurs du Bénin
+                            </h3>
+                            <p class="text-black text-sm mb-4 line-clamp-4">
+                                Restaurant gastronomique proposant une cuisine Béninoise authentique et des plats...
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-black mb-5">
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 500+
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 6 ans
+                                </span>
+                            </div>
+                            <button
+                                class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
+                                data-partner-id="partenaire-"
+                                style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
+                                Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="partner-card4" data-id="partenaire-4"
+                        class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
+                        <div class="h-40 w-full rounded-t-lg overflow-hidden">
+                            <img src="src/assets/images/Elvi_35.jpg" alt="Image du partenaire"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                        </div>
+                        <div class="p-5">
+                            <span
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                Mode & Habillement
+                            </span>
+                            <h3
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                Élégance Mode
+                            </h3>
+                            <p class="text-black text-sm mb-4 line-clamp-4">
+                                Boutique de mode proposant vêtements tendance, accessoires et créations sur-mesure pour
+                                femmes...
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-black mb-5">
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 3000 +
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 12 ans
+                                </span>
+                            </div>
+                            <button
+                                class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
+                                data-partner-id="partenaire-4"
+                                style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
+                                Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="partner-card5" data-id="partenaire-5"
+                        class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
+                        <div class="h-40 w-full rounded-t-lg overflow-hidden">
+                            <img src="src/assets/images/Elvi_41.jpg" alt="Image du partenaire"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                        </div>
+                        <div class="p-5">
+                            <span
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                Agriculture & Agroalimentaire
+                            </span>
+                            <h3
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                BeninAgro Services
+                            </h3>
+                            <p class="text-black text-sm mb-4 line-clamp-4">
+                                Production et distribution de produits agricoles biologiques. Fruits, légumes et
+                                céréales de ...
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-black mb-5">
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 500 +
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 7 ans
+                                </span>
+                            </div>
+                            <button
+                                class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
+                                data-partner-id="partenaire-5"
+                                style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
+                                Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="partner-card6" data-id="partenaire-6"
+                        class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
+                        <div class="h-40 w-full rounded-t-lg overflow-hidden">
+                            <img src="src/assets/images/Elvi_38.jpg" alt="Image du partenaire"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                        </div>
+                        <div class="p-5">
+                            <span
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                Santé & Bien-être
+                            </span>
+                            <h3
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                Wellness Center
+                            </h3>
+                            <p class="text-black text-sm mb-4 line-clamp-4">
+                                Centre de remise en forme moderne. Fitness, yoga, coaching personnalisé et programmes
+                                de...
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-black mb-5">
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 1500 +
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 5 ans
+                                </span>
+                            </div>
+                            <button
+                                class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
+                                data-partner-id="partenaire-6"
+                                style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
+                                Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--CTA-->
+        <section
+            class="w-full py-16 px-6 bg-gradient-to-r from-yellow-400 to-red-600 r text-center text-white font-[Montserrat]">
+
+            <!-- Icône -->
+            <div class="mb-4">
+                <i class="ph ph-lightning text-4xl"></i>
+            </div>
+
+            <!-- Titre -->
+            <h2 class="text-4xl font-semibold mb-3">
+                Vous souhaitez promouvoir votre entreprise ?
+            </h2>
+
+            <!-- Sous-texte -->
+            <p class="text-2xl max-w-5xl mx-auto mb-6">
+                Rejoignez notre espace publicité et bénéficiez de la visibilité qu’offre Elvirex Communication pour
+                développer votre activité au Bénin.
+            </p>
+
+            <!-- Boutons -->
+            <div class="flex items-center justify-center gap-6">
+                <a href="contact.html"
+                    class="px-6 py-3 bg-yellow-300 text-black font-semibold rounded-full hover:bg-yellow-200 transition">
+                    Devenir annonceur
+                </a>
+
+                <a href="contact.html"
+                    class="px-6 py-3 bg-yellow-300 text-black font-semibold rounded-full hover:bg-gray-100 transition">
+                    Nous contacter
+                </a>
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+    <!--Footer-->
+    <footer class="bg-black text-white pt-16 pb-4 px-4 sm:px-8  md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+
+                <div>
+                    <div class="mb-4">
+                        <img src="src/assets/images/logo.png" alt="">
+                    </div>
+
+                    <p class="text-white text-sm mb-6 max-w-xs">
+                        Nous vous faisons gagner du temps en vous accompagnant dans votre stratégie de communication.
+                    </p>
+
+                    <div class="flex space-x-4 text-white">
+
+                        <a href="#" class="w-10 h-10 rounded-lg border-current bg-black hover:bg-red-700 transition duration-150 text-[#fff] 
+                            flex items-center justify-center" style="border-color: #fff;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" class="w-10 h-10 p-1 rounded-lg border-current bg-black hover:bg-red-700 transition duration-150 text-[#fff]
+                            flex items-center justify-center" style="border-color: #fff;">
+                            <svg class="w-full h-full" fill="none" stroke="#fff" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z">
+                                </path>
+                            </svg>
+                        </a>
+
+
+
+                        <a href="#" class="w-10 h-10 rounded-lg border-current bg-black hover:bg-red-700 transition duration-150 text-[#fff] 
+                            flex items-center justify-center" style="border-color: #fff;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6">
+                                <path fill="currentColor"
+                                    d="M448.5 209.9c-44 .1-87-13.6-122.8-39.2l0 178.7c0 33.1-10.1 65.4-29 92.6s-45.6 48-76.6 59.6-64.8 13.5-96.9 5.3-60.9-25.9-82.7-50.8-35.3-56-39-88.9 2.9-66.1 18.6-95.2 40-52.7 69.6-67.7 62.9-20.5 95.7-16l0 89.9c-15-4.7-31.1-4.6-46 .4s-27.9 14.6-37 27.3-14 28.1-13.9 43.9 5.2 31 14.5 43.7 22.4 22.1 37.4 26.9 31.1 4.8 46-.1 28-14.4 37.2-27.1 14.2-28.1 14.2-43.8l0-349.4 88 0c-.1 7.4 .6 14.9 1.9 22.2 3.1 16.3 9.4 31.9 18.7 45.7s21.3 25.6 35.2 34.6c19.9 13.1 43.2 20.1 67 20.1l0 87.4z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-[#E5B420] font-semibold mb-4 border-b-2 border-[#E5B420] inline-block pb-1">
+                        Liens Rapides
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Accueil</a></li>
+                        <li><a href="services.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Portfolio</a>
+                        </li>
+                        <li><a href="a-propos.html" class="text-white hover:text-[#CA161A] transition duration-300">À
+                                propos</a></li>
+                        <li><a href="blog.html" class="text-white hover:text-[#CA161A] transition duration-300">Blog</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-[#E5B420] font-semibold mb-4 border-b-2 border-[#E5B420] inline-block pb-1">
+                        Nos Services
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html#community"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Community
+                                Management</a></li>
+                        <li><a href="services.html#web"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Création de Site
+                                Web</a></li>
+                        <li><a href="services.html#pub"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Publicité
+                                Digitale</a></li>
+                        <li><a href="services.html#event"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Événementiel</a>
+                        </li>
+                        <li><a href="services.html#design"
+                                class="text-white hover:text-[#CA161A] transition duration-300">Graphisme</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-[#E5B420] font-semibold mb-4 border-b-2 border-[#E5B420] inline-block pb-1">
+                        Contact
+                    </h3>
+                    <ul class="space-y-3 text-sm text-white">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0 text-red-600 mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Von fin clôture ITAA, cinquième von à gauche puis première à droite.</span>
+                        </li>
+
+
+                        <li class="space-y-1 pt-2">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 mr-3 flex-shrink-0 text-red-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
+                                <span class="text-white">+229 0143721865</span>
+                            </div>
+                            <div class="pl-6 space-y-0 text-sm">
+                                <a href="tel:+2290154656673" class="hover:text-white">+229 0154656673</a><br>
+                                <a href="tel:+2290196454393" class="hover:text-white">+229 0196454393</a>
+                            </div>
+                        </li>
+
+
+                        <li class="flex items-center space-x-2 pt-2">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0 text-red-600" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:elvirex@gmail.com"
+                                class="hover:text-white transition duration-200">elvirex@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-gray-700 mt-12 mb-4">
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-white">
+                <div class="mb-2 sm:mb-0 flex items-center space-x-1">
+                    <i class="far fa-copyright"></i>
+                    <span>2025 Elvirex Communication. Tous droits réservés</span>
+                </div>
+                <div class="space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-[#CA161A] transition duration-300">Mentions
+                        légales</a>
+                    <a href="politique-confidentialite.html"
+                        class="hover:text-[#CA161A] transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- Bouton de retour en haut -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 p-3 bg-[#CA161A] text-white rounded-full shadow-xl 
+               transition-all duration-300 opacity-0 pointer-events-none hover:bg-red-800 hover:scale-110 transform">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+
+    <!-- JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="src/scripts/script-index.js"></script>
+    <script src="src/scripts/script-pub.js"></script>
+    <script src="src/scripts/script-detail.js"></script>
+    <script src="src/scripts/script-nav.js"></script>
+    <script src="src/scripts/script-modal.js"></script>
+
+
+</body>
+
+</html>
