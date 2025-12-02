@@ -56,8 +56,9 @@ const slides = [
 
 let currentSlide = 0;
 const slideCount = slides.length;
-const intervalTime = 3000;  // Changement automatique rapide (3 secondes)
-const fadeDuration = 300;   // Fade rapide (0.3s)
+const intervalTime = 4000;  // Changement automatique (4 secondes)
+const fadeDuration = 600;   // Fade fluide (0.6s)
+const staggerDelay = 100;   // Délai échelonné entre les éléments (0.1s)
 
 const bgImage = document.getElementById('bg-image');
 const slideTag = document.getElementById('slide-tag');
@@ -69,15 +70,22 @@ const animatedElements = [slideTag, slideTitle, slideSubtitle, slideText, ctaBut
 const indicatorsContainer = document.getElementById('slide-indicators');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+let isTransitioning = false;
+
 
 function updateContent(index) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
     const slide = slides[index];
 
-    // Fade-out rapide
+    // Fade-out avec délai échelonné
+    bgImage.style.transition = `opacity ${fadeDuration}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`;
     bgImage.classList.add('opacity-0');
-    animatedElements.forEach(el => {
-        el.classList.add('opacity-0', 'translate-y-2');
-        el.classList.remove('translate-y-0');
+
+    animatedElements.forEach((el, i) => {
+        el.style.transition = `all ${fadeDuration}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`;
+        el.classList.add('opacity-0', 'translate-y-4');
     });
 
     setTimeout(() => {
@@ -88,12 +96,21 @@ function updateContent(index) {
         slideSubtitle.textContent = slide.subtitle;
         slideText.textContent = slide.text;
 
-        // Fade-in rapide
+        // Force reflow pour relancer les animations
+        void bgImage.offsetWidth;
+
+        // Fade-in avec délai échelonné
         bgImage.classList.remove('opacity-0');
-        animatedElements.forEach(el => {
-            el.classList.remove('opacity-0', 'translate-y-2');
-            el.classList.add('translate-y-0');
+        
+        animatedElements.forEach((el, i) => {
+            setTimeout(() => {
+                el.classList.remove('opacity-0', 'translate-y-4');
+            }, i * staggerDelay);
         });
+
+        setTimeout(() => {
+            isTransitioning = false;
+        }, animatedElements.length * staggerDelay + fadeDuration);
     }, fadeDuration);
 
     updateIndicators(index);

@@ -47,17 +47,17 @@
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Accueil</a>
                         </li>
                         <li>
+                            <a href="a-propos.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">A
+                                Propos</a>
+                        </li>
+                        <li>
                             <a href="services.html"
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Services</a>
                         </li>
                         <li>
                             <a href="portfolio.html"
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="a-propos.html"
-                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">A
-                                Propos</a>
                         </li>
                         <li>
                             <a href="blog.html"
@@ -67,7 +67,6 @@
                             <a href="espace-pubs.html"
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Espace-Pub</a>
                         </li>
-
                         <li>
                             <a href="contact.html"
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Contact</a>
@@ -89,17 +88,17 @@
                         class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Accueil</a>
                 </li>
                 <li>
+                    <a href="a-propos.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">A
+                        Propos</a>
+                </li>
+                <li>
                     <a href="services.html"
                         class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Services</a>
                 </li>
                 <li>
                     <a href="portfolio.html"
                         class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Portfolio</a>
-                </li>
-                <li>
-                    <a href="a-propos.html"
-                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">A
-                        Propos</a>
                 </li>
                 <li>
                     <a href="blog.html"
@@ -181,13 +180,11 @@
                 <h2 class="text-xl font-semibold text-gray-900 mb-8">Articles à la une</h2>
 
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row">
-                    <!-- Image -->
                     <div class="md:w-1/2">
                         <img src="src/assets/images/Elvi_14.jpg" alt="Digital marketing"
                             class="w-full h-64 md:h-full object-cover">
                     </div>
 
-                    <!-- Contenu -->
                     <div class="md:w-1/2 p-6 flex flex-col justify-between">
                         <div>
                             <span class="text-red-600 text-sm font-semibold uppercase tracking-wide">Tendances</span>
@@ -205,13 +202,10 @@
                             </p>
                         </div>
 
-                        <!-- Infos + tags + bouton -->
                         <div class="flex flex-col items-center gap-6">
-                            <!-- 3 colonnes : infos + tags -->
                             <div
                                 class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full text-center sm:text-left text-gray-500 text-sm">
 
-                                <!-- Colonne 1 -->
                                 <div class="flex flex-col items-center sm:items-start gap-2">
                                     <div class="flex items-center gap-1">
                                         <i class="ph ph-users"></i>
@@ -221,7 +215,6 @@
                                         Marketing</span>
                                 </div>
 
-                                <!-- Colonne 2 -->
                                 <div class="flex flex-col items-center sm:items-start gap-2">
                                     <div class="flex items-center gap-1">
                                         <i class="ph ph-calendar"></i>
@@ -231,7 +224,6 @@
                                         Tendances</span>
                                 </div>
 
-                                <!-- Colonne 3 -->
                                 <div class="flex flex-col items-center sm:items-start gap-2">
                                     <div class="flex items-center gap-1">
                                         <i class="ph ph-clock"></i>
@@ -242,18 +234,12 @@
                                 </div>
                             </div>
 
-                            <!-- Bouton centré -->
-
-                            <a href="#" class="inline-flex items-center mr-71  bg-red-700 hover:bg-red-800 text-white 
-                              font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
+                            <a href="article-detail.html?id=tendances2025" class="inline-flex items-center bg-red-700 hover:bg-red-800 text-white 
+                       font-semibold py-3 px-6 rounded-md transition duration-300 hover:scale-105 transform ">
                                 Lire l'article
                                 <span class="ml-2">→</span>
                             </a>
-
-
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -261,7 +247,7 @@
 
         <!-- Liste des articles de blog -->
         <div class="container mx-auto gap-20 px-4 py-6">
-            <h2 class="text-xl font-semibold mb-4 text-gray-800">Derniers articles (9)</h2>
+            <h2 id="latest-articles-title" class="text-xl font-semibold mb-4 text-gray-800">Derniers articles (<span id="articles-count">9</span>)</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 
@@ -290,7 +276,8 @@
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
                                 Design</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-600">
+                        <a href="article-detail.html?id=visuelle"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-600">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
@@ -322,7 +309,8 @@
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
                                 Adobe</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=adobe"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
@@ -355,7 +343,8 @@
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
                                 Stratégie</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=socialmedia"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
@@ -372,9 +361,10 @@
                             class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Tendances</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Comment créer une identité visuelle forte</h3>
-                        <p class="text-gray-600 mb-4 text-sm">L'identité visuelle est la pierre angulaire de votre
-                            marque. Voici les étapes clés pour créer une identité mémorable et cohérente</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Les 5 clés pour optimiser votre SEO local</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Améliorez votre visibilité dans les recherches locales et
+                            attirez
+                            davantage de clients près de chez vous grâce à ces techniques.</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <span class="mr-4">👤 Marc Dubois</span>
                             <span>📅 10 octobre 2025</span>
@@ -382,12 +372,13 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Branding</span>
+                                SEO</span>
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Design</span>
+                                Local</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=seolocal"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
@@ -404,9 +395,11 @@
                             class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Digital</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Formation : maîtriser Adobe Creative Suite</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Découvrez notre formation complète pour maîtriser
-                            Photoshop, Illustrator et InDesign.</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Les erreurs à éviter dans votre stratégie UX/UI
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">Évitez les pièges courants qui nuisent à l'expérience
+                            utilisateur et
+                            compromettent le succès de votre plateforme numérique.</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <span class="mr-4">👤 Marc Dubois</span>
                             <span>📅 1 octobre 2025</span>
@@ -414,12 +407,13 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Formations</span>
+                                UX</span>
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Adobe</span>
+                                Design</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=uxui"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
@@ -436,10 +430,11 @@
                             class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Communication</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Les secrets d'une stratégie social media
-                            réussie</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Développez votre présence sur les réseaux sociaux avec ces
-                            conseils pratiques pour engager votre communauté et générer des ......</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Le Storytelling : l'art de captiver votre
+                            audience</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Apprenez à utiliser le pouvoir des récits pour engager
+                            émotionnellement
+                            vos clients et rendre votre message inoubliable.</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <span class="mr-4">👤 Julie Martin</span>
                             <span>📅 5 octobre 2025</span>
@@ -447,19 +442,20 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Réseaux sociaux</span>
+                                Marketing</span>
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Stratégie</span>
+                                Storytelling</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=storytelling"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Article 7 -->
+                 <!-- Article 7 -->
                 <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-transform duration-500"
                     data-category="formations">
                     <div class="relative h-48 bg-gray-200">
@@ -469,9 +465,11 @@
                             class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Formations</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Comment créer une identité visuelle forte</h3>
-                        <p class="text-gray-600 mb-4 text-sm">L'identité visuelle est la pierre angulaire de votre
-                            marque. Voici les étapes clés pour créer une identité mémorable et cohérente</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Formation : planifier un lancement de produit
+                            réussi</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Maîtrisez toutes les étapes cruciales, de la pré-campagne
+                            au
+                            suivi post-lancement, pour garantir le succès de votre nouveau produit.</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <span class="mr-4">👤 Marc Dubois</span>
                             <span>📅 10 octobre 2025</span>
@@ -479,19 +477,20 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Branding</span>
+                                Marketing</span>
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Design</span>
+                                Formation</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=lancementproduit"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Article 8 -->
+                 <!-- Article 8 -->
                 <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-transform duration-500"
                     data-category="digital">
                     <div class="relative h-48 bg-gray-200">
@@ -501,9 +500,11 @@
                             class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Digital</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Formation : maîtriser Adobe Creative Suite</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Découvrez notre formation complète pour maîtriser
-                            Photoshop, Illustrator et InDesign.</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Protéger votre activité : les bases de la
+                            cybersécurité</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Apprenez les gestes simples pour sécuriser vos données et
+                            celles de vos
+                            clients contre les menaces numériques courantes.</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <span class="mr-4">👤 Marc Dubois</span>
                             <span>📅 1 octobre 2025</span>
@@ -511,19 +512,20 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Formations</span>
+                                Sécurité</span>
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Adobe</span>
+                                IT</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=cybersecurite"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Article 9 -->
+                 <!-- Article 9 -->
                 <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-transform duration-500"
                     data-category="communication">
                     <div class="relative h-48 bg-gray-200">
@@ -533,10 +535,11 @@
                             class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Communication</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Les secrets d'une stratégie social media
-                            réussie</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Développez votre présence sur les réseaux sociaux avec ces
-                            conseils pratiques pour engager votre communauté et générer des ......</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Le Mail Marketing : maximiser le taux
+                            d'ouverture</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Des objets percutants aux appels à l'action clairs,
+                            découvrez comment
+                            optimiser vos campagnes d'emailing pour de meilleurs résultats.</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <span class="mr-4">👤 Julie Martin</span>
                             <span>📅 5 octobre 2025</span>
@@ -544,25 +547,20 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
-                                Réseaux sociaux</span>
+                                Emailing</span>
                             <span
                                 class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full border border-gray-200">#
                                 Stratégie</span>
                         </div>
-                        <a href="#" class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
+                        <a href="article-detail.html?id=mailmarketing"
+                            class="flex items-center text-red-600 font-semibold hover:text-yellow-700">
                             Lire la suite
                             <span class="ml-1 transition-transform transform group-hover:translate-x-1">→</span>
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
-
-
-
 
         <!-- Newsletter Section -->
         <section class="relative py-16 bg-gradient-to-r from-[#e84d3b] to-[#f39c12] text-white text-center">
@@ -595,23 +593,15 @@
             <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
         </section>
 
-
-
-
-
-
-
         <!-- CTA -->
-
-        <section class="bg-black py-12 sm:py-16 md:py-20 text-white">
+        <section class="bg-black py-10  sm:py-16 md:py-20 text-white">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
 
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-lora font-bold mb-4 sm:mb-6">
                     Vous avez un projet en tête ?
                 </h2>
 
-                <p class="text-base sm:text-lg mb-8 sm:mb-10 text-gray-300 font-lora max-w-2xl mx-auto"
-                    data-aos="fade-up">
+                <p class="text-base sm:text-lg mb-8 sm:mb-10 text-gray-300 font-lora max-w-2xl mx-auto">
                     Discutons ensemble de vos besoins et trouvons la solution adaptée
                 </p>
 
@@ -634,8 +624,6 @@
 
             </div>
         </section>
-
-
 
 
     </main>

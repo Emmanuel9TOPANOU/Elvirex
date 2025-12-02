@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
     <!-- En tete de ma page -->
     <header
         class="flex items-center justify-between p-4 fixed top-0 w-full z-50 transition-all duration-300 bg-gray-50 border-b border-gray-200">
@@ -47,17 +48,17 @@
                                 class="text-[#CA161A] font-lora hover:text-yellow-600 text-lg border-l-4 border-[#CA161A] block pl-3 py-1 transition duration-500">Accueil</a>
                         </li>
                         <li>
+                            <a href="a-propos.html"
+                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">A
+                                Propos</a>
+                        </li>
+                        <li>
                             <a href="services.html"
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Services</a>
                         </li>
                         <li>
                             <a href="portfolio.html"
                                 class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="a-propos.html"
-                                class="text-white font-lora hover:text-yellow-600 text-lg border-l-4 border-transparent hover:border-[#CA161A] block pl-3 py-1 transition duration-500">A
-                                Propos</a>
                         </li>
                         <li>
                             <a href="blog.html"
@@ -89,17 +90,17 @@
 
                 </li>
                 <li>
+                    <a href="a-propos.html"
+                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">A
+                        Propos</a>
+                </li>
+                <li>
                     <a href="services.html"
                         class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Services</a>
                 </li>
                 <li>
                     <a href="portfolio.html"
                         class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">Portfolio</a>
-                </li>
-                <li>
-                    <a href="a-propos.html"
-                        class="font-lora border-b-2 border-transparent hover:text-yellow-600 hover:border-[#CA161A] pb-1 transition duration-500">A
-                        Propos</a>
                 </li>
                 <li>
                     <a href="blog.html"
@@ -125,54 +126,31 @@
     <main class="mt-24">
 
         <!--Hero Section -->
-        <section class="relative w-full bg-cover bg-center text-white py-20"
-            style="background-image: url('src/assets/images/Elvi_37.jpg');">
+        <section class="relative h-[70vh] w-full bg-cover bg-center text-white py-20
+            flex items-center justify-center" style="background-image: url('src/assets/images/Elvi_37.jpg');">
 
             <div class="absolute inset-0 bg-black opacity-80"></div>
 
             <div class="relative z-10 max-w-5xl mx-auto text-center px-4">
 
-                <div
-                    class="inline-flex items-center gap-2 bg-white/30 text-white px-4 py-2 rounded-full mb-6 backdrop-blur-md">
-                    <i class="ph ph-megaphone"></i>
-
-
-                    <span class="font-bold text-2xl">Espace publicité</span>
+                <!-- Contenu (titre centré) -->
+                <div class="relative z-10 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold font-lora tracking-wide drop-shadow-lg "
+                        data-aos="fade-right">
+                        Espace <span class="text-yellow-600"> Publicité</span>
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl text-gray-200 font-light" data-aos="fade-left">
+                        Découvrez nos partenaires et nos services publicitaires qui vous permettront de promouvoir vos
+                        produits et services.
+                    </p>
                 </div>
-
-                <p class="text-lg md:text-xl font-light leading-relaxed text-white/90" data-aos="fade-up"
-                    data-aos-duration="400">
-                    Elvirex Communication vous présente ses partenaires annonceurs.
-                    Des entreprises vérifiées et de confiance qui proposent des services
-                    de qualité dans différents domaines d’activité au Bénin.
-                </p>
-
-                <div class="mt-8 flex flex-wrap justify-center gap-4">
-                    <button
-                        class="flex items-center text-2xl gap-2 bg-[#E5B420] transition px-5 py-3 rounded-full backdrop-blur-md">
-                        <i class="ph ph-eye"></i>
-                        Entreprises vérifiées
-                    </button>
-
-                    <button
-                        class="flex items-center text-2xl gap-2 bg-[#E5B420] transition px-5 py-3 rounded-full backdrop-blur-md">
-                        <i class="ph ph-trend-up"></i>
-                        Contact direct
-                    </button>
-
-                    <button
-                        class="flex items-center text-2xl gap-2 bg-[#E5B420] transition px-5 py-3 rounded-full backdrop-blur-md">
-                        <i class="ph ph-sparkle"></i>
-                        Services de qualité
-                    </button>
-                </div>
-            </div>
         </section>
 
 
 
+
         <!--Counters Section-->
-        <section class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+        <section class="max-w-7xl mx-auto px-4 py-10 md:py-16">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
 
                 <div class="flex flex-col items-center">
@@ -222,17 +200,15 @@
 
 
         <!--Partners Section-->
-        <section class="bg-gray-50 py-16 md:py-24">
+        <section class="bg-gray-50 py-10 md:py-16">
             <div class="max-w-7xl mx-auto px-4">
 
                 <div class="text-center mb-12">
-                    <span class="inline-block bg-[#FDDD9B] text-black font-bold px-5 py-1 rounded-md text-3xl mb-4">
-                        Nos annonceurs
-                    </span>
-                    <h2 class="text-2xl md:text-3xl font-bold text-black mb-3">
-                        Entreprises partenaires et annonceurs
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-black mb-3" data-aos="fade-up" data-aos-duration="500">
+                        Entreprises <span class="text-yellow-500">partenaires</span> et annonceurs
                     </h2>
-                    <p class="text-black max-w-2xl mx-auto">
+                    <p class="text-black max-w-5xl mx-auto">
                         Elvirex Communication vous présente ses partenaires annonceurs. Des entreprises vérifiées
                         et de confiance qui proposent des services de qualité dans différents services d’activité au
                         Bénin.
@@ -241,23 +217,23 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <div class="partner-card1" data-id="partenaire-1"
+                    <div data-id="partenaire-1"
                         class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
 
                         <div class="h-40 w-full rounded-t-lg overflow-hidden">
                             <img src="src/assets/images/Elvi_33.jpg" alt="Image du partenaire"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
                         </div>
 
                         <div class="p-5">
 
                             <span
-                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3 group-hover:bg-[#FF7F00] group-hover:text-white transition duration-300">
                                 Automobile & Mécanique
                             </span>
 
                             <h3
-                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition duration-300">
                                 AutoExpert Cotonou
                             </h3>
 
@@ -268,14 +244,16 @@
 
                             <div class="flex items-center gap-4 text-sm text-black mb-5">
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 2000 +
+                                    <i
+                                        class="ph ph-users text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    2000 +
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 15 ans
+                                    <i
+                                        class="ph ph-medal text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    15 ans
                                 </span>
                             </div>
-
-
 
                             <button
                                 class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
@@ -286,19 +264,19 @@
                         </div>
                     </div>
 
-                    <div class="partner-card2" data-id="partenaire-2"
+                    <div data-id="partenaire-2"
                         class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
                         <div class="h-40 w-full rounded-t-lg overflow-hidden">
                             <img src="src/assets/images/Elvi_39.jpg" alt="Image du partenaire"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
                         </div>
                         <div class="p-5">
                             <span
-                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3 group-hover:bg-[#FF7F00] group-hover:text-white transition duration-300">
                                 Technologies & IT
                             </span>
                             <h3
-                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition duration-300">
                                 TechSolutions Bénin
                             </h3>
                             <p class="text-black text-sm mb-4 line-clamp-4">
@@ -307,10 +285,14 @@
                             </p>
                             <div class="flex items-center gap-4 text-sm text-black mb-5">
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 150 +
+                                    <i
+                                        class="ph ph-users text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    150 +
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 10 ans
+                                    <i
+                                        class="ph ph-medal text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    10 ans
                                 </span>
                             </div>
                             <button
@@ -322,19 +304,19 @@
                         </div>
                     </div>
 
-                    <div class="partner-card3" data-id="partenaire-3"
+                    <div data-id="partenaire-3"
                         class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
                         <div class="h-40 w-full rounded-t-lg overflow-hidden">
                             <img src="src/assets/images/Elvi_36.jpg" alt="Image du partenaire"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
                         </div>
                         <div class="p-5">
                             <span
-                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3 group-hover:bg-[#FF7F00] group-hover:text-white transition duration-300">
                                 Restauration & gastronomie
                             </span>
                             <h3
-                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition duration-300">
                                 Saveurs du Bénin
                             </h3>
                             <p class="text-black text-sm mb-4 line-clamp-4">
@@ -342,34 +324,38 @@
                             </p>
                             <div class="flex items-center gap-4 text-sm text-black mb-5">
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 500+
+                                    <i
+                                        class="ph ph-users text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    500+
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 6 ans
+                                    <i
+                                        class="ph ph-medal text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    6 ans
                                 </span>
                             </div>
                             <button
                                 class="inline-flex items-center justify-center w-full text-white font-semibold py-2 rounded-lg shadow-lg transition duration-300 detail-button"
-                                data-partner-id="partenaire-"
+                                data-partner-id="partenaire-3"
                                 style="background: linear-gradient(to right, #FFCE33 0%, #ff3407 100%); box-shadow: 0 4px 6px -1px rgba(255, 127, 0, 0.4), 0 2px 4px -2px rgba(255, 127, 0, 0.4);">
                                 Voir les détails <i class="ph ph-arrow-right text-base ml-2"></i>
                             </button>
                         </div>
                     </div>
 
-                    <div class="partner-card4" data-id="partenaire-4"
+                    <div data-id="partenaire-4"
                         class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
                         <div class="h-40 w-full rounded-t-lg overflow-hidden">
                             <img src="src/assets/images/Elvi_35.jpg" alt="Image du partenaire"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
                         </div>
                         <div class="p-5">
                             <span
-                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3 group-hover:bg-[#FF7F00] group-hover:text-white transition duration-300">
                                 Mode & Habillement
                             </span>
                             <h3
-                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition duration-300">
                                 Élégance Mode
                             </h3>
                             <p class="text-black text-sm mb-4 line-clamp-4">
@@ -378,10 +364,14 @@
                             </p>
                             <div class="flex items-center gap-4 text-sm text-black mb-5">
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 3000 +
+                                    <i
+                                        class="ph ph-users text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    3000 +
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 12 ans
+                                    <i
+                                        class="ph ph-medal text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    12 ans
                                 </span>
                             </div>
                             <button
@@ -393,19 +383,19 @@
                         </div>
                     </div>
 
-                    <div class="partner-card5" data-id="partenaire-5"
+                    <div data-id="partenaire-5"
                         class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
                         <div class="h-40 w-full rounded-t-lg overflow-hidden">
                             <img src="src/assets/images/Elvi_41.jpg" alt="Image du partenaire"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
                         </div>
                         <div class="p-5">
                             <span
-                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3 group-hover:bg-[#FF7F00] group-hover:text-white transition duration-300">
                                 Agriculture & Agroalimentaire
                             </span>
                             <h3
-                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition duration-300">
                                 BeninAgro Services
                             </h3>
                             <p class="text-black text-sm mb-4 line-clamp-4">
@@ -414,10 +404,14 @@
                             </p>
                             <div class="flex items-center gap-4 text-sm text-black mb-5">
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 500 +
+                                    <i
+                                        class="ph ph-users text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    500 +
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 7 ans
+                                    <i
+                                        class="ph ph-medal text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    7 ans
                                 </span>
                             </div>
                             <button
@@ -429,20 +423,20 @@
                         </div>
                     </div>
 
-                    <div class="partner-card6" data-id="partenaire-6"
+                    <div data-id="partenaire-6"
                         class="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden group cursor-pointer">
                         <div class="h-40 w-full rounded-t-lg overflow-hidden">
                             <img src="src/assets/images/Elvi_38.jpg" alt="Image du partenaire"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300" />
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
                         </div>
                         <div class="p-5">
                             <span
-                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3">
+                                class="inline-block bg-[#FDDD9B] text-[#FF7F00] px-3 py-1 rounded-lg font-semibold text-xs mb-3 group-hover:bg-[#FF7F00] group-hover:text-white transition duration-300">
                                 Santé & Bien-être
                             </span>
                             <h3
-                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition">
-                                Wellness Center
+                                class="text-xl font-bold mb-2 text-black leading-tight group-hover:text-[#FF7F00] transition duration-300">
+                                Centre de bien être
                             </h3>
                             <p class="text-black text-sm mb-4 line-clamp-4">
                                 Centre de remise en forme moderne. Fitness, yoga, coaching personnalisé et programmes
@@ -450,10 +444,14 @@
                             </p>
                             <div class="flex items-center gap-4 text-sm text-black mb-5">
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-users text-base text-[#FF7F00]"></i> 1500 +
+                                    <i
+                                        class="ph ph-users text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    1500 +
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <i class="ph ph-medal text-base text-[#FF7F00]"></i> 5 ans
+                                    <i
+                                        class="ph ph-medal text-base text-[#FF7F00] group-hover:text-black transition duration-300"></i>
+                                    5 ans
                                 </span>
                             </div>
                             <button
@@ -472,13 +470,8 @@
 
 
         <!--CTA-->
-        <section
-            class="w-full py-16 px-6 bg-gradient-to-r from-yellow-400 to-red-600 r text-center text-white font-[Montserrat]">
+        <section class="bg-black py-10 sm:py-16 md:py-20 text-white text-center">
 
-            <!-- Icône -->
-            <div class="mb-4">
-                <i class="ph ph-lightning text-4xl"></i>
-            </div>
 
             <!-- Titre -->
             <h2 class="text-4xl font-semibold mb-3">
@@ -486,25 +479,28 @@
             </h2>
 
             <!-- Sous-texte -->
-            <p class="text-2xl max-w-5xl mx-auto mb-6">
+            <p class="text-lg mt-8 max-w-2xl mx-auto mb-6">
                 Rejoignez notre espace publicité et bénéficiez de la visibilité qu’offre Elvirex Communication pour
                 développer votre activité au Bénin.
             </p>
 
             <!-- Boutons -->
-            <div class="flex items-center justify-center gap-6">
-                <a href="contact.html"
-                    class="px-6 py-3 bg-yellow-300 text-black font-semibold rounded-full hover:bg-yellow-200 transition">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="contact.html" class="bg-[#CA161A] text-white font-bold py-3 px-8 rounded-md 
+               hover:bg-[#b51216] transition duration-300 w-full sm:w-auto 
+               flex items-center justify-center space-x-2 text-lg hover:scale-105 transform">
                     Devenir annonceur
                 </a>
 
-                <a href="contact.html"
-                    class="px-6 py-3 bg-yellow-300 text-black font-semibold rounded-full hover:bg-gray-100 transition">
+                <a href="contact.html" class="border-2 border-white text-white font-bold py-3 px-8 rounded-md 
+               hover:bg-white hover:text-black transition duration-300 w-full sm:w-auto 
+               text-lg hover:scale-105 transform">
                     Nous contacter
                 </a>
             </div>
 
         </section>
+
 
 
 
